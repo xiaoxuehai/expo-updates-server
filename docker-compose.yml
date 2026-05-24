@@ -1,0 +1,17 @@
+services:
+  updates-server:
+    build: .
+    container_name: expo-updates-server
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      - HOSTNAME=${HOSTNAME:-http://10.0.2.2:3000}
+      - PORT=3000
+      - UPDATES_DIR=/data/updates
+      - PRIVATE_KEY_PATH=${PRIVATE_KEY_PATH:-}
+    volumes:
+      - updates-data:/data/updates
+
+volumes:
+  updates-data:

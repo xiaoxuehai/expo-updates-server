@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.local
+.env*.local
+*.log
+.DS_Store
+updates/
+*.apk
+bundle.zip
+.upload-bundle.zip
+*.tsbuildinfo

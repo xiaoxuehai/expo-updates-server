@@ -1,0 +1,56 @@
+{
+  "name": "expo-updates-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-hosted Expo Updates server built with Hono",
+  "license": "MIT",
+  "author": "xiaoxuehai",
+  "repository": "https://github.com/xiaoxuehai/expo-updates-server",
+  "keywords": [
+    "expo",
+    "expo-updates",
+    "ota",
+    "hono",
+    "self-hosted"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "UPDATES_DIR=${UPDATES_DIR:-updates} tsx watch --env-file=.env.local src/index.ts",
+    "start": "UPDATES_DIR=${UPDATES_DIR:-updates} tsx --env-file=.env.local src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "lint": "biome check src",
+    "lint:fix": "biome check --fix src",
+    "format": "biome format --write src",
+    "check": "biome check --fix src",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@hono/zod-openapi": "^1.4.0",
+    "@scalar/hono-api-reference": "^0.10.19",
+    "adm-zip": "^0.5.17",
+    "form-data": "^4.0.4",
+    "hono": "^4.6.14",
+    "mime": "^2.5.2",
+    "nullthrows": "^1.1.1",
+    "structured-headers": "^0.4.1",
+    "zod": "^4.4.3"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "biome check --fix --no-errors-on-unmatched"
+    ]
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.15",
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@types/adm-zip": "^0.5.8",
+    "@types/mime": "^2.0.3",
+    "@types/node": "^24.5.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.2"
+  }
+}

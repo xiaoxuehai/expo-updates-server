@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "biomejs.biome",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "ms-azuretools.vscode-docker"
+  ]
+}

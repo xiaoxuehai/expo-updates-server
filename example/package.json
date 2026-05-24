@@ -1,0 +1,31 @@
+{
+  "name": "expo-updates-server-example",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "expo": "~56.0.4",
+    "expo-build-properties": "^56.0.14",
+    "expo-status-bar": "~56.0.4",
+    "expo-updates": "^56.0.16",
+    "react": "19.2.3",
+    "react-native": "0.85.3"
+  },
+  "devDependencies": {
+    "@types/archiver": "^7.0.0",
+    "@types/node": "^25.9.1",
+    "@types/react": "~19.2.2",
+    "archiver": "^7.0.1",
+    "tsx": "^4.19.0",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "deploy": "tsx scripts/deploy.ts",
+    "deploy:test": "tsx scripts/deploy.ts --notes \"test deploy\"",
+    "build": "eas build --platform android --profile production --local"
+  },
+  "private": true
+}
