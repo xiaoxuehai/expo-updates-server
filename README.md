@@ -66,6 +66,16 @@ pnpm start  # 无 watch，部署用
 
 启动后访问 `http://localhost:3000/reference` 查看 API 文档。
 
+### 5. 快速体验（使用示例 APK）
+
+从 [GitHub Releases](https://github.com/xiaoxuehai/expo-updates-server/releases) 下载示例 APK，直接安装到 Android 设备上测试 OTA 更新流程：
+
+1. 确保手机与服务端在同一网络
+2. 启动服务端（`pnpm dev`）
+3. 安装 APK，打开后点击 **检查更新** 按钮测试
+
+> 示例 APK 默认连接 `http://10.0.2.2:3000`（模拟器地址）。真机测试需修改 `example/app.json` 中的 `updates.url` 为服务端实际 IP 后重新构建。
+
 ---
 
 ## Docker 部署
